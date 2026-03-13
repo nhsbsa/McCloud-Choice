@@ -24,8 +24,6 @@ router.post('/membership-number', (req, res) => {
         res.redirect('enter-date-of-birth')
     } else if (memberNumber == "No, I do not know my membership number") {
         res.redirect('enter-your-national-insurance-number');
-    } else if (memberNumber == "I'm not sure") {
-        res.redirect('enter-your-national-insurance-number');
     }else {
         res.redirect('membership-number')
     }
