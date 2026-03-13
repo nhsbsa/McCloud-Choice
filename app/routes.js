@@ -1,8 +1,17 @@
 // External dependencies
-const express = require('express')
+const express = require('express');
+const router = express.Router();
 
-const router = express.Router()
+// clear session data - link in footer
+router.post('/clear-session-data/', (req, res) => {
+    req.session.data = {}
+    res.render('index')
+})
 
-// Add your routes here - above the module.exports line
+// =======================================
+// Version Routes Files Below
+// =======================================
 
-module.exports = router
+router.use('/v1', require('./views/v1/_routes'));
+
+module.exports = router;

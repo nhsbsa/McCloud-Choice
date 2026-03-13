@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% set pageTitle = "You will receive your pack by 15 April 2027"%}
+{% set hideBack ="true" %}
+
+{% block pageTitle %}
+{{pageTitle}} - {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+ 
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="maincontent">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-panel">
+          <h1 class="nhsuk-panel__title">
+            {{pageTitle}}
+          </h1>
+        </div>
+        <!--<p>
+          We have sent you a confirmation email{% if (data['emailAddress']) %} to {{ data['emailAddress']}}{% endif %}.
+        </p>-->
+        <h2 class="nhsuk-heading-m">What happens next</h2>
+        <p class= "nhsuk-body">You will receive a pack that will help you decide which pension benefits are right for you, the pack includes:</p>  
+            <ul>
+        <li>A simple and detailed view of your choices</li>
+        <li>Essential information you need to read</li>
+        <li>Supporting information that you may find useful</li>
+        <li>A decision form to complete and send back to us</li>
+      </ul>       
+        <h2 class="nhsuk-heading-m">Give us your feedback</h2>
+        <p><a href="#" class="nhsuk-link">Tell us about your experience using this service</a> (opens in a new tab)</p>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+
