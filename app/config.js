@@ -2,7 +2,7 @@
 
 module.exports = {
   // Service name
-  serviceName: 'Receiving your public service pensions remedy pack',
+  serviceName: 'Check your remedy statement delivery date',
 
   // Port to run the prototype on locally
   port: 3000

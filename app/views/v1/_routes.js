@@ -15,7 +15,7 @@ router.post(/start/, (req, res) => {
     res.redirect('membership-number')
 });
 
-// MEMBER - Do you know your membership number?
+// Do you know your membership number?
 router.post('/membership-number', (req, res) => {
 
     var memberNumber = req.session.data['membership-number']
@@ -23,6 +23,8 @@ router.post('/membership-number', (req, res) => {
     if (memberNumber == 'Yes, I know my membership number') {
         res.redirect('enter-date-of-birth')
     } else if (memberNumber == "No, I do not know my membership number") {
+        res.redirect('enter-your-national-insurance-number');
+    } else if (memberNumber == "I'm not sure") {
         res.redirect('enter-your-national-insurance-number');
     }else {
         res.redirect('membership-number')
