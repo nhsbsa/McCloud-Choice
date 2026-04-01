@@ -1,0 +1,79 @@
+<!-- Hide Back Link on this page -->
+{% set hideBack = true %}
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="member-not-found" method="post">
+
+      <!-- heading of pace-->
+      <h1>
+        Member not found
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+     
+
+      <p>
+        We could not find a member using the details you entered. This could be because either:
+      </p>
+
+      <ul>
+        <li>the membership number does not exist</li>
+        <li>the date of birth does not match our record for that membership number</li>
+      </ul>
+
+      <p>You can start again if you think you may have entered the wrong details.</p>
+
+      <p>If your details were correct, you can contact us using our <a href="https://contact-nhs-pensions.nhsbsa.nhs.uk/start" class="nhsuk-link">Contact NHS Pensions (opens in a new tab) </a> service.</p>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Start again
+      </button>
+      </form>
+
+      <!-- End of content -->
+   
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}
+

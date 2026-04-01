@@ -11,7 +11,7 @@ const router = express.Router();
 
 
 // Start page
-router.post(/start/, (req, res) => {
+router.post('/start', (req, res) => {
     res.redirect('membership-number')
 });
 
@@ -52,6 +52,11 @@ router.post('/enter-your-national-insurance-number', function (req, res) {
         res.redirect('enter-your-national-insurance-number');  // Field is empty
     }
 
+});
+
+// Member not found page
+router.post('/member-not-found', (req, res) => {
+    res.redirect('start')
 });
 
 module.exports = router;
