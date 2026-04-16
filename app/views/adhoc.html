@@ -1,0 +1,102 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "serviceName" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">Adhoc </h1>
+      <p>In this section you can find all the error states and error pages that are present in the Check a Remediable Service Statement delivery date service. The pages were designed to align with existing Pensions services to ensure consistency.</p>
+
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Error pages
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <table class="nhsuk-table">
+
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th scope="col" class="nhsuk-table__header">
+                  Type of error
+                </th>
+                <th scope="col" class="nhsuk-table__header">
+                  URL
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  500
+                </td>
+                <td class="nhsuk-table__cell">
+                  <a href="errors/500">There is a problem with the service</a>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  503
+                </td>
+                <td class="nhsuk-table__cell">
+                  <a href= "errors/503">Sorry the service is unavailable</a>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  403
+                </td>
+                <td class="nhsuk-table__cell">
+                  <a href="errors/403">You do not have permission to view this page</a>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  404
+                </td>
+                <td class="nhsuk-table__cell">
+                  <a href="errors/404">Page not found</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+      
+        </div>
+      </details>
+
+
+  
+
+    </div>
+  </div>
+{% endblock %}
