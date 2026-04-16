@@ -86,9 +86,15 @@ router.post('/enter-date-of-birth', (req, res) => {
     const day = Number(req.session.data['birthDay']);
     const month = Number(req.session.data['birthMonth']);
     const year = Number(req.session.data['birthYear']);
-    const sdNumber = req.session.data['sdNumber']
-    const nino = req.session.data['nationalInsuranceNumber']
+    let sdNumber = req.session.data['sdNumber'];
+    const nino = req.session.data['nationalInsuranceNumber'];
 
+    // Normalise membership number
+    sdNumber = (sdNumber || '')
+      .toString()
+      .replace(/\s+/g, '')
+      .toUpperCase()
+      .replace(/^SD/, '');
   
     if (day === 10 && month === 10 && year === 1980 && sdNumber === '11867897') {
       res.redirect('/v1/not-due-rss-yet');
