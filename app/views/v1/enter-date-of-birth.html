@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-{% set pageTitle = "What is your date of birth?"%}
+{% set pageTitle = "What is the member's date of birth?"%}
 
 {% block pageTitle %}
 {{pageTitle}} - {{serviceName}}
@@ -56,6 +56,12 @@
             </div>
           </fieldset>
         </div>
+
+        {% call details({
+          summaryText: "What details should you enter for a pension credit member or someone who's died?"
+        }) %}
+          <p>If you're using this service for a pension credit member or someone who's died, enter their own date of birth number. Do not enter the ex-spouse's or the designated person's membership number.</p>
+        {% endcall %}
 
         {{ button({
           text: "Continue"

@@ -43,7 +43,7 @@
               }
             },
             hint: {
-              text: "This starts with 'SD' (like SD12345678).  You can find it on payslips, Annual Benefit Statements, Total Reward Statements, or any letters from us"
+              text: "This is an 8 digit number, which may start with 'SD'.  You can find it on payslips, Annual Benefit Statements, Total Reward Statements, or any letters from us"
             },
             items: [ 
               {
@@ -64,9 +64,14 @@
               }
             ]
           }) }}
-          <div>
-            
-          </div>
+          
+          <br/>
+
+          {% call details({
+            summaryText: "What details should you enter for a pension credit member or someone who's died?"
+          }) %}
+            <p>If you're using this service for a pension credit member or someone who's died, enter their own NHS Pensions membership number. Do not enter the ex-spouse's or the designated person's membership number.</p>
+          {% endcall %}
           
           
   
