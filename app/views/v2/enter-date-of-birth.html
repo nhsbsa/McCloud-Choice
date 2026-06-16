@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+{% set pageTitle = "What is the member's date of birth?"%}
+
+{% block pageTitle %}
+{{pageTitle}} - {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="enter-date-of-birth" method="post">
+        
+        <span class="nhsuk-caption-l nhsuk-caption--bottom">Details</span>
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" role="group" aria-describedby="birth-date-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                What is the member's date of birth?
+              </h1>
+            </legend>
+            <div class="nhsuk-hint" id="birth-date-hint">
+              For example, 18 3 1984
+            </div>
+            <div class="nhsuk-date-input" id="birth-date">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="birth-date-day">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="birth-date-day" name="birthDay" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="birth-date-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="birth-date-month" name="birthMonth" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="birth-date-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="birth-date-year" name="birthYear" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {% call details({
+          summaryText: "What details should you enter for a pension credit member or someone who's died?"
+        }) %}
+          <p>If you're using this service for a pension credit member or someone who's died, enter their own date of birth. Do not enter the former spouse's or the designated person's date of birth.</p>
+        {% endcall %}
+
+        {{ button({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>  
+  </div>
+{% endblock %}

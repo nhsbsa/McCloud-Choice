@@ -1,0 +1,89 @@
+<!-- Hide Back Link on this page -->
+{% set hideBack = true %}
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="start" method="post">
+
+      <!-- Change the page heading -->
+      <h1>
+        {{ serviceName }}
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p>If a member is affected by the Public Service Pensions Remedy (also known as McCloud), you can use this service to find out when their Remediable Service Statement (RSS) should arrive.</p>
+      <p>Pension credit members can also use this service. </p>
+      <p>An RSS shows the member's pension benefits under:</p>
+      <ul>
+        <li>the 1995 or 2008 Scheme, depending on which one they were a member of before 1 April 2022</li>
+        <li>the 2015 NHS Pension Scheme</li>
+      </ul>
+
+      <p>Members can then compare the benefits and decide what they'd like to take.</p>
+
+      <p>You can read more about <a href="https://www.nhsbsa.nhs.uk/public-service-pensions-remedy-mccloud/understanding-if-your-nhs-pension-affected-changes-public-sector-pensions" target="_blank">who is affected by McCloud (opens in new tab)</a>.</p>
+
+      <h3>
+        Before you start
+      </h3>
+      
+      <p>
+        We'll ask you for the member's:
+      </p>
+
+      <ul>
+        <li>NHS Pensions membership number or National Insurance number</li>
+        <li>date of birth</li>
+      </ul>
+
+      <p>If you're using this service to find out the delivery date for someone who has died, you will need to know their information.</p>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Start now
+      </button>
+
+      <!-- End of content -->
+  
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}

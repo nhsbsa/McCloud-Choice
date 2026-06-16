@@ -1,0 +1,160 @@
+<!-- Hide Back Link on this page -->
+{% set hideBack = true %}
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-three-quarters">
+
+        <form action="result-3-elements" method="post">
+
+      <!-- heading of pace-->
+      <h1>
+        Your results
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p>
+        Based on the data you have entered, this summary information will let you know if you are impacted by McCloud and if so what elements are impacted.
+      </p>
+
+      <p>Use the tabs to switch between your benefits.</p>
+
+      <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+        <h2 class="nhsuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="nhsuk-tabs__list">
+          <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+            <a class="nhsuk-tabs__tab" href="#your-pension">
+              Your pension
+            </a>
+          </li>
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#adult-dependent">
+              Adult dependent benefits
+            </a>
+          </li>
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#pension-credit">
+             Pension credit
+            </a>
+          </li>
+        </ul>
+        <div class="nhsuk-tabs__panel" id="your-pension">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading">
+                First scheme membership
+              </h3>
+              <p class="nhsuk-card__description">For this service, you are impacted by McCloud and your Remediable Service Statement (RSS) has already been sent and the choice on retirement has already been made/received.</p>
+            </div>
+            </div>
+              
+            
+            <div class="nhsuk-card">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading">
+                  Second scheme membership
+                </h3>
+                <p class="nhsuk-card__description">For this service, you are not impacted by McCloud and your Remediable Service Statement (RSS) has already been sent and the choice on retirement has already been received.</p>
+              </div>
+          </div>
+
+          <h3>What happens next</h3>
+          <p>As the choice on retirement has already been made, you do not need to do anything.</p>
+          <p>If you have any questions, you can <a href="" target="blank" class="nhsuk-link">contact us (opens in new tab)</a>.</p>
+          
+        </div>
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="adult-dependent">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading">
+                Adult dependent benefits
+              </h3>
+              <p class="nhsuk-card__description">Based on the details provided, your adult dependent benefits are impacted by McCloud. You will be sent a Remediable Service Statement (RSS) for these benefits by <b>30 June 2030</b>.</p>
+            </div>
+              
+            </div>
+            
+
+          <h3>What happens next</h3>
+          <p>Some members may need their RSS sooner if they meet certain criteria. You can read more about this in our <a href="" target="blank" class="nhsuk-link">When you'll make your remedy choice (opens in new tab)</a> page.</p>
+          <p>If you have any questions, you can <a href="" target="blank" class="nhsuk-link">contact us (opens in new tab)</a>.</p>
+          
+        </div>
+        
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="pension-credit">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading">
+                Pension credit member
+              </h3>
+              <p class="nhsuk-card__description">Based on the details provided, you are a pension credit member. You will not be sent an Remediable Service Statement (RSS) for these benefits.</b>.</p>
+            </div>
+              
+            </div>
+            
+
+          <h3>What happens next</h3>
+          <p>If your former spouse is affected by McCloud, we’ll review the pension credit member’s benefits. We'll send a letter explaining whether the pension credit amount changes or stays the same.</p>
+          <p>If you have any questions, you can <a href="" target="blank" class="nhsuk-link">contact us (opens in new tab)</a>.</p>
+          
+        </div>
+        </div>
+        <h3>Feedback</h3>
+        <p><a href="" target="blank">Tell us about your experience using this service (opens in new tab)</a></p>
+        </div>
+        
+      </div>
+      
+
+
+
+
+      
+      </form>
+
+      <!-- End of content -->
+   
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}
+

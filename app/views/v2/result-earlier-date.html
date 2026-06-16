@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% set pageTitle = "This member's Remediable Service Statement (RSS) should arrive by 31 December 2027"%}
+{% set hideBack ="true" %}
+
+<!--Hide Beta banner from this page-->
+{% set hideBetaBanner = true %}
+
+{% block pageTitle %}
+{{pageTitle}} - {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+ 
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="maincontent">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <form action="result-earlier-date" method="post"></form>
+
+        <div class="nhsuk-panel">
+          <h1 class="nhsuk-panel__title">
+            {{pageTitle}}
+          </h1>
+        </div>
+        
+        <h2 class="nhsuk-heading-m">What happens next</h2>
+        <p class= "nhsuk-body">Based on our information, this member's choice is more likely to affect their pension benefits compared to some other members.</p> 
+        <p>The RSS may arrive earlier than this date.</p> 
+        
+        <p>Some members may need their RSS sooner if they meet certain criteria. You can read more about this in our <a href="https://www.nhsbsa.nhs.uk/public-service-pensions-remedy-mccloud/making-your-remedy-choice/when-youll-make-your-remedy-choice" target="blank" class="nhsuk-link">When you'll make your remedy choice (opens in new tab)</a> page.</p>
+
+        <p>If you have any questions, you can <a href="https://www.nhsbsa.nhs.uk/pensioner-hub/contact-nhs-pensions-pensioners" target="blank" class="nhsuk-link">contact us (opens in new tab)</a>.</p>
+
+        <h2 class="nhsuk-heading-m">Feedback</h2>
+        <p><a href="" target="blank">Tell us about your experience using this service (opens in new tab)</a></p>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

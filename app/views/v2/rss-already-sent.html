@@ -1,0 +1,75 @@
+<!-- Hide Back Link on this page -->
+{% set hideBack = true %}
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="rss-already-sent" method="post">
+
+      <!-- heading of pace-->
+      <h1>
+        We've already sent a Remediable Service Statement (RSS) to this member
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+     
+
+      <p>
+        The member should have already received an RSS.
+      </p>
+
+      <p>If they have not, you can <a href="https://www.nhsbsa.nhs.uk/pensioner-hub/contact-nhs-pensions-pensioners" target="blank" class="nhsuk-link">contact us (opens in new tab) </a>.</p>
+
+      <h2 class="nhsuk-heading-m">Feedback</h2>
+      <p><a href="" target="blank">Tell us about your experience using this service (opens in new tab)</a>.</p>
+
+      
+
+      
+      </form>
+
+      <!-- End of content -->
+   
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}
+

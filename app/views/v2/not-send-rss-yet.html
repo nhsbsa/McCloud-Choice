@@ -1,0 +1,85 @@
+<!-- Hide Back Link on this page -->
+{% set hideBack = true %}
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="not-send-rss-yet" method="post">
+
+      <!-- heading of pace-->
+      <h1>
+        We'll not send a Remediable Service Statement (RSS) to this member yet
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+     
+
+      <p>
+        This member will not make a choice about their benefits yet because the benefits they're currently receiving do not include McCloud impacted ones.
+      </p>
+
+      <p>This is because:</p>
+
+      <ul>
+        <li>they were a member of the 2008 Scheme during the remedy period</li>
+        <li>they've partially retired and have taken their benefits from the 1995 Scheme only</li>
+      </ul>
+
+      
+
+      <h2 class="nhsuk-heading-m">What happens next</h2>
+
+      <p>When the member starts receiving their full pension, we'll send them an RSS.</p>
+
+      <p>They'll then choose between 2008 and 2015 Scheme benefits.</p>
+
+      <h2 class="nhsuk-heading-m">Feedback</h2>
+        <p><a href="" target="blank">Tell us about your experience using this service (opens in new tab)</a>.</p>
+
+      </form>
+
+      <!-- End of content -->
+   
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}
+

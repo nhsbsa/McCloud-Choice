@@ -1,0 +1,91 @@
+<!-- Hide Back Link on this page -->
+{% set hideBack = true %}
+
+<!--Hide Beta banner from this page-->
+{% set hideBetaBanner = true %}
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="not-due-rss-yet" method="post">
+
+      <!-- heading of pace-->
+      <h1>
+        This member is not due a Remediable Service Statement (RSS) yet
+      </h1>
+
+      <p>
+        This member is affected by McCloud, but is not due their RSS yet. This could be because we're not paying their pension benefits yet.
+      </p>
+
+      <p>Their annual benefit statement (ABS) will show them what their retirement options might look like depending on which remedy choice they make when they retire.</p>
+
+      <p>On retirement, some members may need their RSS sooner if they meet certain criteria. You can read more about this in our <a href="https://www.nhsbsa.nhs.uk/public-service-pensions-remedy-mccloud/making-your-remedy-choice/when-youll-make-your-remedy-choice" target="blank" class="nhsuk-link">When you'll make your remedy choice (opens in new tab)</a> page.</p>
+
+      <h2>If the member's payments have already started</h2>
+      <h3>If their payments started recently</h3>
+
+      <p>We may not have a delivery date yet for a member's RSS if their pension payments have only started recently. You can check again another day or contact us.</p>
+
+      <h3>If they partially retired before 31 March 2015</h3>
+
+      <p>If the member partially retired before 31 March 2015 and has only claimed 1995 Section benefits, the pension payments they're receiving now are not affected by McCloud.</p>
+      <p>Their remedy choice is between 2008 Scheme and 2015 Scheme benefits, which are not currently being paid.</p>
+
+      <h3>If they have decoupled 1995 benefits</h3>
+
+      <p>If the member retired and only claimed decoupled 1995 Scheme benefits, the pension payments they're receiving now are not affected by McCloud.</p>
+      <p>This is because they left the NHS Pension Scheme for over 5 years before re-joining, meaning their 1995 Section benefits stayed separated from their new membership (also known as ‘decoupled’).</p>
+      <p>Their remedy choice is between 2008 Scheme and 2015 Scheme benefits, which are not currently being paid.</p>
+
+      <h2 class="nhsuk-heading-m">If you need help</h2>
+      <p>If you have any questions, you can <a href="https://www.nhsbsa.nhs.uk/pensioner-hub/contact-nhs-pensions-pensioners" target="blank">contact us (opens in new tab)</a></p>
+
+      <h2 class="nhsuk-heading-m">Feedback</h2>
+        <p><a href="" target="blank">Tell us about your experience using this service (opens in new tab)</a></p>
+
+      </form>
+
+      <!-- End of content -->
+   
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}
+
